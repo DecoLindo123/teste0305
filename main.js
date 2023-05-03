@@ -27,9 +27,10 @@ function gotResult(error, results)
         {
             console.error(error);
         }
-        else(results)
+        else
         {
             console.log(results);
+            objetos = results;
         }
 }
 
@@ -44,6 +45,16 @@ function setup()
 function draw()
 {
     image(video,0,0,480,380);
-    
+    if(staus != "")
+    {
+        objectDetector.detect(video, gotResult);
+        for(i= 0; i<objetos.length; i++ ){
+        document.getElementById("status").innerHTML = "objetos detectados";
+        document.getElementById("objetos").innerHTML = "Quantidade de objetos detectados: " + objetos.length;
+        fill("red");
+        porcentagem = floor(objetos[i].confidence * 100);
+        text(objetos[i].label + " " + porcentagem + "%" , objetos[i].x + 15, objetos[i].y +15);
+        } 
+    }
 }
 
