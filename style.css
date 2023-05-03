@@ -1,0 +1,23 @@
+#fundo
+{
+    background-image: url("fundo-gradiente-de-cor-liquida-em-tons-de-azul-ilustracao-vetorial_647322-252.avif");
+    background-size:cover ;
+    text-align: center;
+}
+
+h1
+{
+    font-size: 25px;
+    background-color: burlywood;
+    margin-top: 0;
+    padding-bottom:10px;
+
+}
+
+canvas
+{
+    border: 2px inset burlywood;
+    border-radius: 10px;
+    box-shadow: 15px 2px 10px gray;
+    margin-top: 200px;
+}
