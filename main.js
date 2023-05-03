@@ -45,7 +45,7 @@ function setup()
 function draw()
 {
     image(video,0,0,480,380);
-    if(staus != "")
+    if(status != "")
     {
         objectDetector.detect(video, gotResult);
         for(i= 0; i<objetos.length; i++ ){
